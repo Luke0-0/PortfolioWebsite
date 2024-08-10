@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<script src="js/app.js"></script>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--CSS Styles -->
+    <link rel="stylesheet" href="assets/css/styles.css" />
+
+    <!-- Favicons -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="assets/icons/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="assets/icons/favicon-32x32.png"
+    />
+
+    <!-- Animate CSS CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <title>Luke Reinbach | Web Developer</title>
+  </head>
+
+  <body>
+    <!-- Navbar -->
+      <nav id="nav">   
+        <h1>@</h1>
+        <ul class="navigation">
+          <li><a href="#moreabout" class="nav-link">About</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+        <button class="burger-menu" id="burger-menu">
+          <ion-icon class="bars" name="menu-outline"></ion-icon>
+        </button>
+      </nav> 
+        
+
+    <!-- Hero Section -->
+    <section class="hero" id="about">
+     
+      <div class="bio" id="bioSection">
+        <h1 class="bio-title" id="bioTitle">LUKE</h1>
+        <h2 class="bio-title" id="bioSubTitle">R E I N B A C H</h2> 
+      </div>
+
+      <!-- Make heading shrink when user scrolls up -->
+      <script>
+        window.onscroll = function() {scrollFunction()};
+  
+        function scrollFunction() {
+          if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+            document.getElementById("bioTitle").style.fontSize = "31px";
+            document.getElementById("bioTitle").style.position = "sticky";
+            document.getElementById("bioTitle").style.top = "0";
+            document.getElementById("bioTitle").style.padding = "1.15rem 3.5rem";
+
+            document.getElementById("bioSubTitle").style.fontSize = "11px";
+            document.getElementById("bioSubTitle").style.position = "sticky";
+            document.getElementById("bioSubTitle").style.top = "1.75rem";
+            document.getElementById("bioSubTitle").style.marginRight = "0.32rem";
+            document.getElementById("bioSubTitle").style.padding = "1.15rem 3.5rem";
+
+            document.getElementById("about").style.position = "sticky";
+            document.getElementById("about").style.top = "-2rem";
+
+            document.getElementById("nav").style.boxShadow = "0px 2.5px 5px black";
+       
+          } else {
+            document.getElementById("bioTitle").style.fontSize = "201px";
+            document.getElementById("bioTitle").style.padding = "0";
+
+            document.getElementById("bioSubTitle").style.fontSize = "71px";
+            document.getElementById("bioSubTitle").style.padding = "0";
+            document.getElementById("bioSubTitle").style.marginRight = "0";
+
+            document.getElementById("nav").style.boxShadow = "0px 0px 0px black";
+          }
+        }
+      </script>
+    </section>
+
+    <section class = "miniBio">
+      <p>
+        Junior software developer, intrepid learner, generally cool dude.
+      </p>
+    </section>
+
+
+    <!-- More about -->
+
+    <section class="more-about" id="moreabout">
+     <div class="more-about-box">
+      <h2>How's it going?</h2>
+          <p>
+            I am a junior software developer currently studying a Bachelor’s in computer science and psychology at the University of Cape Town, set to graduate at the end of the year (so close). 
+            I am very eager to gain work experience and learn new relevant skills, and am always looking for a new challenge to push my boundaries.
+            While I like to have fun, I know how to get things done!
+          </p>
+      </div>
+      <div class="skill-box">
+        <img 
+          class="icon icon-card" 
+          src = "assets/icons/icons8-html.svg"
+          alt=""
+          loading="lazy"
+         />
+  
+         <img 
+            class="icon icon-card" 
+            src = "assets/icons/icons8-css.svg"
+            alt=""
+            loading="lazy"
+        />
+         <img 
+           class="icon icon-card" 
+           src = "assets/icons/icons8-javascript.svg"
+           alt=""
+           loading="lazy"
+         />
+
+         <img 
+          class="icon icon-card" 
+          src = "assets/icons/icons8-python.svg"
+          alt=""
+          loading="lazy"
+        />
+
+        <img 
+          class="icon icon-card" 
+          src = "assets/icons/icons8-java.svg"
+          alt=""
+          loading="lazy"
+          />
+
+        <img 
+          class="icon icon-card" 
+          src = "assets/icons/icons8-django.svg"
+          alt=""
+          loading="lazy"
+        />
+
+        <img 
+          class="icon icon-card" 
+          src = "assets/icons/icons8-mysql.svg"
+          alt=""
+          loading="lazy"
+        />
+
+        <img 
+          class="icon icon-card" 
+          src = "assets/icons/icons8-git.svg"
+          alt=""
+          loading="lazy"
+        />
+
+      </div>
+    </section>
+
+
+    <div class="image">
+      <img
+      src="assets/images/coding.svg"
+      alt="computer"
+      loading="lazy"
+      class="hero-img"
+    />
+    </div>
+
+
+    
+    <!-- Projects section -->
+    <section class="projects" id="projects">
+      <h2 class="projects-title">Some of my Recent Projects</h2>
+      <div class="projects-container">
+        <div class="project-container project-card">
+          <img
+            src="assets/images/expenseTracker.png"
+            alt="expense-tracker"
+            loading="lazy"
+            class="project-pic"
+          />
+          <h3 class="project-title">Expense Tracker</h3>
+          <p class="project-details">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas
+            ratione vel inventore labore commodi modi quos culpa aut saepe!
+            Alias!
+          </p>
+          <a href="#" target="_blank" class="project-link">Check it Out</a>
+        </div>
+        <div class="project-container project-card">
+          <img
+            src="assets/images/netflixClone.png"
+            alt="netflic-clone"
+            loading="lazy"
+            class="project-pic"
+          />
+          <h3 class="project-title">Netflix Clone</h3>
+          <p class="project-details">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas
+            ratione vel inventore labore commodi modi quos culpa aut saepe!
+            Alias!
+          </p>
+          <a href="#" target="_blank" class="project-link">Check it Out</a>
+        </div>
+        <div class="project-container project-card">
+          <img
+            src="assets/images/greenyEarth.png"
+            alt="greeny-earth"
+            loading="lazy"
+            class="project-pic"
+          />
+          <h3 class="project-title">Greeny Earth</h3>
+          <p class="project-details">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas
+            ratione vel inventore labore commodi modi quos culpa aut saepe!
+            Alias!
+          </p>
+          <a href="#" target="_blank" class="project-link">Check it Out</a>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Contact section -->
+
+    <!-- Social accounts - Fixed to the right -->
+
+    <!-- Footer section -->
+
+    <!-- Website scripts -->
+    <script src="assets/js/app.js"></script>
+
+    <!-- Ion icons scripts -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>
