@@ -59,7 +59,7 @@
         window.onscroll = function() {scrollFunction()};
   
         function scrollFunction() {
-          if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+          if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
             document.getElementById("bioTitle").style.fontSize = "31px";
             document.getElementById("bioTitle").style.position = "sticky";
             document.getElementById("bioTitle").style.top = "0";
@@ -73,10 +73,15 @@
 
             document.getElementById("about").style.position = "sticky";
             document.getElementById("about").style.top = "-2rem";
+            document.getElementById("about").style.height = "5%";
+            document.getElementById("about").style.width = "20%";
 
             document.getElementById("nav").style.boxShadow = "0px 2.5px 5px black";
+            document.getElementById("nav").style.opacity = "100%";
        
-          } else {
+          } 
+          
+          else {
             document.getElementById("bioTitle").style.fontSize = "201px";
             document.getElementById("bioTitle").style.padding = "0";
 
@@ -84,7 +89,11 @@
             document.getElementById("bioSubTitle").style.padding = "0";
             document.getElementById("bioSubTitle").style.marginRight = "0";
 
+            document.getElementById("about").style.height = "100%";
+            document.getElementById("about").style.width = "100%";
+
             document.getElementById("nav").style.boxShadow = "0px 0px 0px black";
+            document.getElementById("nav").style.opacity = "0%";
           }
         }
       </script>
@@ -99,7 +108,10 @@
 
     <!-- More about -->
 
+    <h3>About</h3>
+
     <section class="more-about" id="moreabout">
+
      <div class="more-about-box">
       <h2>How's it going?</h2>
           <p>
@@ -165,9 +177,28 @@
         />
 
       </div>
+
+      <script>
+        const observer = new IntersectionObserver(entries => {
+          // Loop over the entries
+          entries.forEach(entry => {
+            // If the element is visible
+            if (entry.isIntersecting) {
+              // Add the animation class
+              entry.target.classList.add('more-about-animation');
+            }
+          });
+        });
+        
+        observer.observe(document.querySelector('.more-about-box'));
+      </script>
+
     </section>
 
+    
 
+
+<!-- 
     <div class="image">
       <img
       src="assets/images/coding.svg"
@@ -176,9 +207,9 @@
       class="hero-img"
     />
     </div>
+  -->
 
 
-    
     <!-- Projects section -->
     <section class="projects" id="projects">
       <h2 class="projects-title">Some of my Recent Projects</h2>
