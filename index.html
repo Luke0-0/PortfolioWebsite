@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<script src="js/app.js"></script>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -27,13 +26,18 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     />
-    <title>Luke Reinbach | Web Developer</title>
+    <title>Luke Reinbach</title>
   </head>
 
   <body>
     <!-- Navbar -->
       <nav id="nav">   
-        <h1>@</h1>
+
+        <div class="image-container">
+          <img src="assets/icons/icons8-github.svg" alt="Image" class="image img1">
+          <img src="assets/icons/icons8-githubBlue.svg" alt="Image" class="image img2">
+        </div>
+  
         <ul class="navigation">
           <li><a href="#moreabout" class="nav-link">About</a></li>
           <li><a href="#skills" class="nav-link">Skills</a></li>
@@ -63,15 +67,15 @@
             document.getElementById("bioTitle").style.fontSize = "31px";
             document.getElementById("bioTitle").style.position = "sticky";
             document.getElementById("bioTitle").style.top = "0";
-            document.getElementById("bioTitle").style.padding = "1.15rem 3.5rem";
-            document.getElementById("bioTitle").style.textShadow = "none";
+            document.getElementById("bioTitle").style.padding = ".75rem 0rem";
+            document.getElementById("bioTitle").style.setProperty("text-shadow", "none", "important");
 
             document.getElementById("bioSubTitle").style.fontSize = "11px";
             document.getElementById("bioSubTitle").style.position = "sticky";
             document.getElementById("bioSubTitle").style.top = "1.75rem";
             document.getElementById("bioSubTitle").style.marginRight = "0.32rem";
-            document.getElementById("bioSubTitle").style.padding = "1.15rem 3.5rem";
-            document.getElementById("bioSubTitle").style.textShadow = "none";
+            document.getElementById("bioSubTitle").style.padding = ".75rem 0rem";
+            document.getElementById("bioSubTitle").style.setProperty("text-shadow", "none", "important");
 
             document.getElementById("about").style.position = "sticky";
             document.getElementById("about").style.top = "-2rem";
@@ -86,10 +90,12 @@
           else {
             document.getElementById("bioTitle").style.fontSize = "201px";
             document.getElementById("bioTitle").style.padding = "0";
+            document.getElementById("bioTitle").style.textShadow = "8px 2px 3px rgb(52, 97, 193)";
 
             document.getElementById("bioSubTitle").style.fontSize = "71px";
             document.getElementById("bioSubTitle").style.padding = "0";
             document.getElementById("bioSubTitle").style.marginRight = "0";
+            document.getElementById("bioSubTitle").style.textShadow = "8px 2px 3px rgb(52, 97, 193)";
 
             document.getElementById("about").style.height = "100%";
             document.getElementById("about").style.width = "100%";
@@ -126,7 +132,6 @@
     border-bottom: 12px solid rgb(52, 97, 193);
     text-shadow: 2px 2px 4px rgb(0, 0, 0);
     "
-    
     > About </h3>
 
     <section class="more-about" id="moreabout">
@@ -293,23 +298,22 @@
 
     <!-- Projects section -->
     <section class="projects" id="projects">
-      <h2 class="projects-title">Some of my Recent Projects</h2>
+      <h2 class="projects-title">Projects</h2>
       <div class="projects-container">
-        <div class="project-container project-card">
-          <img
-            src="assets/images/expenseTracker.png"
-            alt="expense-tracker"
-            loading="lazy"
-            class="project-pic"
-          />
-          <h3 class="project-title">Expense Tracker</h3>
-          <p class="project-details">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas
-            ratione vel inventore labore commodi modi quos culpa aut saepe!
-            Alias!
-          </p>
-          <a href="#" target="_blank" class="project-link">Check it Out</a>
-        </div>
+        <a href="#" target="blank" style="text-decoration: none;">
+          <div class="project-container project-card">
+            <img
+              src="assets/images/website.png"
+              alt="expense-tracker"
+              loading="lazy"
+              class="project-pic"
+            />
+            <h3 class="project-title">Super Cool Website</h3>
+            <p class="project-details">
+              Amazing full-stack software developer portfolio website
+            </p>
+          </div>
+        </a>
         <div class="project-container project-card">
           <img
             src="assets/images/netflixClone.png"
@@ -319,11 +323,8 @@
           />
           <h3 class="project-title">Netflix Clone</h3>
           <p class="project-details">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas
-            ratione vel inventore labore commodi modi quos culpa aut saepe!
-            Alias!
+            I did not actually do this, it is just a placeholder until I actullay make a project
           </p>
-          <a href="#" target="_blank" class="project-link">Check it Out</a>
         </div>
         <div class="project-container project-card">
           <img
@@ -334,31 +335,74 @@
           />
           <h3 class="project-title">Greeny Earth</h3>
           <p class="project-details">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas
-            ratione vel inventore labore commodi modi quos culpa aut saepe!
-            Alias!
+            I did not actually do this, it is just a placeholder until I actullay make a project
           </p>
-          <a href="#" target="_blank" class="project-link">Check it Out</a>
         </div>
       </div>
     </section>
 
+
+    <!-- Contact section -->
     <section class = "contact">
       <h1>
         Like what you see? Let's get in touch
       </h1>
 
-
-
-
+      <div class="contact-form-container">
+        <div class="contact-form">
+          <form action="https://api.web3forms.com/submit" method="POST">
+            <div class="form-control">
+              <input type="hidden" name="access_key" value="48432454-12da-49e5-b8e4-3112a48f6c4a">
+              <input
+                type="text"
+                id="name"
+                name="sender-name"
+                placeholder="Name"
+                class="input-field"
+                required
+              />
+            </div>
+            <div class="form-control">
+              <input
+                type="email"
+                id="email"
+                name="sender-email"
+                placeholder="Email"
+                class="input-field"
+                required
+              />
+            </div>
+            <div class="form-control">
+              <textarea
+                id="message"
+                cols="60"
+                rows="10"
+                placeholder="Wow, where to begin? I am completely blown away by your sheer talent and creativity..."
+                name="message"
+                class="input-field"
+                required
+              ></textarea>
+            </div>
+            <input
+              type="submit"
+              value="Submit"
+              id="submit-btn"
+              class="submit-btn"
+            />
+          </form>
+        </div>
+      </div>
     </section>
-
-
-    <!-- Contact section -->
 
     <!-- Social accounts - Fixed to the right -->
 
     <!-- Footer section -->
+    <footer>
+      <p class="copy" style="padding-bottom: 0.3rem;">&copy; Copyright 2024</p>
+      <p class="copy">
+        Built with my bare hands &#129311 
+      </p>
+    </footer>
 
     <!-- Website scripts -->
     <script src="assets/js/app.js"></script>

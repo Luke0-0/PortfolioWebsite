@@ -96,6 +96,36 @@ nav ul li {
   display: none;
 }
 
+.image-container {
+    position: relative;
+    width: 3rem;   /* Set the desired width */
+    height: 3rem;   /* The height will be determined by the content */
+    margin-bottom: -2rem;
+    transform: translateY(-0.9rem);
+
+}
+
+.image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: opacity 0.5s ease; /* Smooth transition for opacity */
+}
+
+.img2 {
+    opacity: 0; /* Hide the second image by default */
+}
+
+.image-container:hover .img2 {
+    opacity: 1; /* Fade in the second image on hover */
+}
+
+.image-container:hover .img1 {
+    opacity: 0; /* Fade out the first image on hover */
+}
+
 /* About me format */
 .hero {
   display: flex;
@@ -328,14 +358,49 @@ nav ul li {
 /* Projects format */
 .projects {
   background-color: var(--bg-color);
-  padding: 32px 0;
-  margin-top: -5rem;
-  z-index: 0;
+  margin-top: 10rem;
+  color: white;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
+
+.projects h2 {
+  width: 14rem;
+  font-size: 45px; 
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  margin: auto;
+  margin-bottom: 4rem;
+  margin-top: 1rem;
+  align-items: center;
+  justify-content:center;
+  text-align: center;
+  padding: 1.1rem;
+  border-bottom: 12px solid rgb(52, 97, 193);
+  text-shadow: 2px 2px 4px rgb(0, 0, 0);
+}
+
+.projects a {
+  text-decoration: none;
+}
+
+.projects a:link {
+  color: white;
+}
+
+.projects a:visited {
+  color: white;
+}
+
+.projects a:hover {
+  color: white;
+}
+
 
 .project-pic {
   width: 65%;
   height: 60%;
+  border: 2px solid rgb(255, 255, 255);
+  border-radius: 0.45rem;
+  box-shadow: 1px 1px 4px black;
 }
 
 .projects-container {
@@ -362,27 +427,45 @@ nav ul li {
 
 .project-title {
   margin-bottom: var(--bottom-margin);
+  margin-top: .75rem;
 }
 
 .project-details {
   margin-bottom: var(--bottom-margin);
+  background-color: rgb(58, 57, 57);
+  border-radius: 0.45rem;
+  transition: 0.25s;
 }
 
 .project-card {
-  background-color: #fff;
+  width: 27rem;
+  height: 19rem;
+  background-color: rgb(36, 36, 36);
   border-radius: 11px;
-  box-shadow: 0 3px 10px var(--primary-shadow);
+  box-shadow: 0 3px 10px black;
   padding: 20px;
   margin: 10px;
+  border: 2px solid rgb(52, 97, 193);
+  transition: 0.25s;
 }
 
+.project-card:hover {
+  background-color: rgb(52, 97, 193);
+  transform: scale(1.05);
+}
+
+.project-card:hover .project-details {
+  background-color: rgb(201, 201, 201);
+  color: black;
+}
+
+/* Contact Format */
 .contact {
-  margin-top: 20rem;
+  margin-top: 13rem;
   margin-bottom: 10rem;
   color: white;
   justify-content: center;
   align-items: center;
-
 }
 
 .contact h1 {
@@ -391,4 +474,74 @@ nav ul li {
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   margin: auto;
   text-align: center;
+  padding: 1.1rem;
+  margin-bottom: 1.5rem;
+}
+
+.contact-form-container {
+  max-width: 40.75rem;
+  margin: 0 auto;
+  padding: 0.938rem;
+  border-radius: 25px;
+}
+
+.contact-form-container textarea {
+  min-height: 6.25rem;
+  font-size: 14px;
+}
+
+.contact-form-container .input-field {
+  width: 100%;
+  max-width: 100%;
+  min-width: 100%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 0.5rem;
+  margin-bottom: 0.5rem;
+  border-radius: 5px;
+  border: none;
+  border: 2px outset rgb(61, 61, 61);
+  font-size: 0.875rem;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  outline: none;
+  background-color: rgb(61, 61, 61);
+  border: 3px solid rgb(52, 97, 193);
+  color: white;
+}
+
+.input-field::placeholder {
+  padding: -0.5rem;
+  color: rgb(213, 213, 213);
+  opacity: 40%;
+}
+
+.submit-btn {
+  width: 30%;
+  padding: 10px;
+  margin-left: 27.25rem;
+  color:rgb(164, 164, 164);
+  background-color: rgb(61, 61, 61);
+  border: 2px solid rgb(52, 97, 193);
+  border-radius: 5px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 1rem;
+  font-weight: var(--bold-font);
+  transition: var(--transition);
+}
+
+.submit-btn:hover {
+  background-color: rgb(52, 97, 193);
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+}
+
+
+/* Footer format */
+footer {
+  color: white;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  background-color: rgb(28, 28, 28);
+  padding: 1.25rem;
+  text-align: center;
+  margin: 2rem 0 0;
 }
