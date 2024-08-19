@@ -20,6 +20,7 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding: 4rem;
 }
 
 /* CSS Resets */
@@ -126,6 +127,42 @@ nav ul li {
     opacity: 0; /* Fade out the first image on hover */
 }
 
+@media screen and (max-width: 720px) {
+  nav {
+    padding: 1.5rem 1rem;
+  }
+
+  nav ul {
+    position: fixed;
+    background-color: var(--bg-color);
+    flex-direction: column;
+    top: 86px;
+    left: 10%;
+    width: 80%;
+    text-align: center;
+    transform: translateX(120%);
+    transition: transform 0.5s ease-in;
+  }
+
+   nav ul li {
+    margin: 8px;
+  }
+
+  .burger-menu {
+    display: block;
+  }
+
+  nav ul.show {
+    transform: translateX(0);
+  }
+
+  .hero {
+    margin-top: -4rem;
+    flex-direction: column;
+    gap: 0;
+  }
+}
+
 /* About me format */
 .hero {
   display: flex;
@@ -161,10 +198,10 @@ nav ul li {
   animation: fadeIn 1.9s, slideRight 1.3s, textShadow 1.5s 0.8s forwards;
 }
 
-  .bio h1:hover {
-    color:rgb(52, 97, 193);
-    text-shadow: 7px 2px 2px white !important;
-  }
+.bio h1:hover {
+  color:rgb(52, 97, 193);
+  text-shadow: 7px 2px 2px white !important;
+}
 
 .bio h2 {
   opacity: 0%;
@@ -462,7 +499,7 @@ nav ul li {
 /* Contact Format */
 .contact {
   margin-top: 13rem;
-  margin-bottom: 10rem;
+  margin-bottom: 8rem;
   color: white;
   justify-content: center;
   align-items: center;

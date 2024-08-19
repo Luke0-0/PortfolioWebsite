@@ -34,13 +34,14 @@
       <nav id="nav">   
 
         <div class="image-container">
-          <img src="assets/icons/icons8-github.svg" alt="Image" class="image img1">
-          <img src="assets/icons/icons8-githubBlue.svg" alt="Image" class="image img2">
+          <a href="https://github.com/Luke0-0" target="blank"> 
+            <img src="assets/icons/icons8-github.svg" alt="Image" class="image img1">
+            <img src="assets/icons/icons8-githubBlue.svg" alt="Image" class="image img2">
+          </a>
         </div>
   
         <ul class="navigation">
           <li><a href="#moreabout" class="nav-link">About</a></li>
-          <li><a href="#skills" class="nav-link">Skills</a></li>
           <li><a href="#projects" class="nav-link">Projects</a></li>
           <li><a href="#contact" class="nav-link">Contact</a></li>
         </ul>
@@ -48,11 +49,30 @@
           <ion-icon class="bars" name="menu-outline"></ion-icon>
         </button>
       </nav> 
+      <script>
+        const burger = document.querySelector("#burger-menu");
+        const ul = document.querySelector("nav ul");
+        const nav = document.querySelector("nav");
+
+        burger.addEventListener("click", () => {
+          ul.classList.toggle("show");
+        });
+
+        // Select nav links
+        const navLink = document.querySelectorAll(".nav-link");
+
+        navLink.forEach((link) =>
+          link.addEventListener("click", () => {
+            ul.classList.remove("show");
+          })
+        );
+
+      </script>
+
         
 
     <!-- Hero Section -->
     <section class="hero" id="about">
-     
       <div class="bio" id="bioSection">
         <h1 class="bio-title" id="bioTitle">LUKE</h1>
         <h2 class="bio-title" id="bioSubTitle">R E I N B A C H</h2> 
@@ -116,25 +136,25 @@
 
     <!-- More about -->
 
-    <h3 
-    style=
-    "color: white; 
-    width: 11.5rem;
-    font-size: 45px; 
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    margin: auto;
-    margin-bottom: 8rem;
-    margin-top: 1rem;
-    align-items: center;
-    justify-content:center;
-    text-align: center;
-    padding: 1.1rem;
-    border-bottom: 12px solid rgb(52, 97, 193);
-    text-shadow: 2px 2px 4px rgb(0, 0, 0);
-    "
+    <h3 id="moreabout"
+      style=
+      "color: white; 
+      width: 11.5rem;
+      font-size: 45px; 
+      font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+      margin: auto;
+      margin-bottom: 8rem;
+      margin-top: 1rem;
+      align-items: center;
+      justify-content:center;
+      text-align: center;
+      padding: 1.1rem;
+      border-bottom: 12px solid rgb(52, 97, 193);
+      text-shadow: 2px 2px 4px rgb(0, 0, 0);
+      "
     > About </h3>
 
-    <section class="more-about" id="moreabout">
+    <section class="more-about">
 
      <div class="more-about-box">
       <h2>How's it going?</h2>
@@ -278,23 +298,7 @@
             watcher.observe(element);
           });
       </script>
-
     </section>
-
-    
-
-
-<!-- 
-    <div class="image">
-      <img
-      src="assets/images/coding.svg"
-      alt="computer"
-      loading="lazy"
-      class="hero-img"
-    />
-    </div>
-  -->
-
 
     <!-- Projects section -->
     <section class="projects" id="projects">
@@ -343,7 +347,7 @@
 
 
     <!-- Contact section -->
-    <section class = "contact">
+    <section class = "contact" id="contact">
       <h1>
         Like what you see? Let's get in touch
       </h1>
