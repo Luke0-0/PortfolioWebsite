@@ -153,7 +153,8 @@ nav ul li {
 
 }
 
-.bio h1 {
+/* "Luke" title */
+.bio h1 { 
   font-size: 13rem;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   justify-content: center;
@@ -169,6 +170,7 @@ nav ul li {
   text-shadow: 7px 2px 2px white !important;
 }
 
+/* "Reinbach" title */
 .bio h2 {
   opacity: 0%;
   font-size: 4.6rem;
@@ -228,6 +230,7 @@ nav ul li {
   margin: auto;
 }
 
+/* bit of text below "Luke Reinbach" heading */
 .miniBio p {
   opacity: 0;
   padding: 0.3rem 0;
@@ -292,6 +295,7 @@ nav ul li {
   }
 }
 
+/* "About" title */
 .more-about h2 {
   margin-top: 1rem;
   margin-bottom: 2.75rem;
@@ -584,22 +588,37 @@ footer {
     gap: 0;
   }
 
+  .bio {
+    margin: auto;
+    margin-top: 4rem
+  }
+
   .bio h1 {
     font-size: 5rem;
+    margin: auto;
+    margin-bottom: -1.35rem;
+
   }
 
   .bio h2 {
-    font-size: 1.6rem;
+    font-size: 1.75rem;
+    margin: auto;
+  
   }
 
   .miniBio {
     padding: 0.625rem;
     max-width: 100rem;
     margin: auto;
+    margin-top: -12rem;
+    margin-bottom: 5rem;
   }
   
   .miniBio p {
     font-size: 12px;
   }
 
+  .more-about h2 {
+    font-size: 1;
+  }
 }
