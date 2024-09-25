@@ -64,6 +64,7 @@ nav {
   padding: 1.5rem 3.5rem;
   background-color: var(--secondary-color);
   transition: 0.6s;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 nav h1 {
@@ -112,7 +113,7 @@ nav ul li {
     left: 0;
     width: 100%;
     height: 100%;
-    transition: opacity 0.5s ease; /* Smooth transition for opacity */
+    transition: opacity 0.4s ease; /* Smooth transition for opacity */
 }
 
 .img2 {
@@ -127,41 +128,6 @@ nav ul li {
     opacity: 0; /* Fade out the first image on hover */
 }
 
-@media screen and (max-width: 720px) {
-  nav {
-    padding: 1.5rem 1rem;
-  }
-
-  nav ul {
-    position: fixed;
-    background-color: var(--bg-color);
-    flex-direction: column;
-    top: 86px;
-    left: 10%;
-    width: 80%;
-    text-align: center;
-    transform: translateX(120%);
-    transition: transform 0.5s ease-in;
-  }
-
-   nav ul li {
-    margin: 8px;
-  }
-
-  .burger-menu {
-    display: block;
-  }
-
-  nav ul.show {
-    transform: translateX(0);
-  }
-
-  .hero {
-    margin-top: -4rem;
-    flex-direction: column;
-    gap: 0;
-  }
-}
 
 /* About me format */
 .hero {
@@ -184,11 +150,11 @@ nav ul li {
   text-align: center;
   z-index: 1000;
   height: 300px;
-  
+
 }
 
 .bio h1 {
-  font-size: 201px;
+  font-size: 13rem;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   justify-content: center;
   margin-bottom: -56px;
@@ -205,7 +171,7 @@ nav ul li {
 
 .bio h2 {
   opacity: 0%;
-  font-size: 71px;
+  font-size: 4.6rem;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   justify-content: center;
   margin-left: 6px;
@@ -581,4 +547,59 @@ footer {
   padding: 1.25rem;
   text-align: center;
   margin: 2rem 0 0;
+}
+
+@media screen and (max-width: 720px) {
+  nav {
+    padding: 1.5rem 1rem;
+  }
+
+  nav ul {
+    position: fixed;
+    background-color: var(--bg-color);
+    flex-direction: column;
+    top: 86px;
+    left: 10%;
+    width: 80%;
+    text-align: center;
+    transform: translateX(120%);
+    transition: transform 0.5s ease-in;
+  }
+
+   nav ul li {
+    margin: 8px;
+  }
+
+  .burger-menu {
+    display: block;
+  }
+
+  nav ul.show {
+    transform: translateX(0);
+  }
+
+  .hero {
+    margin-top: -4rem;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .bio h1 {
+    font-size: 5rem;
+  }
+
+  .bio h2 {
+    font-size: 1.6rem;
+  }
+
+  .miniBio {
+    padding: 0.625rem;
+    max-width: 100rem;
+    margin: auto;
+  }
+  
+  .miniBio p {
+    font-size: 12px;
+  }
+
 }

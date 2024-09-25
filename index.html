@@ -84,13 +84,14 @@
   
         function scrollFunction() {
           if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
-            document.getElementById("bioTitle").style.fontSize = "31px";
+            document.getElementById("bioTitle").style.fontSize = "1.7rem";
             document.getElementById("bioTitle").style.position = "sticky";
             document.getElementById("bioTitle").style.top = "0";
             document.getElementById("bioTitle").style.padding = ".75rem 0rem";
+            document.getElementById("bioTitle").style.top = "0.2rem";
             document.getElementById("bioTitle").style.setProperty("text-shadow", "none", "important");
 
-            document.getElementById("bioSubTitle").style.fontSize = "11px";
+            document.getElementById("bioSubTitle").style.fontSize = "0.6rem";
             document.getElementById("bioSubTitle").style.position = "sticky";
             document.getElementById("bioSubTitle").style.top = "1.75rem";
             document.getElementById("bioSubTitle").style.marginRight = "0.32rem";
@@ -108,11 +109,11 @@
           } 
           
           else {
-            document.getElementById("bioTitle").style.fontSize = "201px";
+            document.getElementById("bioTitle").style.fontSize = "13rem";
             document.getElementById("bioTitle").style.padding = "0";
             document.getElementById("bioTitle").style.textShadow = "8px 2px 3px rgb(52, 97, 193)";
 
-            document.getElementById("bioSubTitle").style.fontSize = "71px";
+            document.getElementById("bioSubTitle").style.fontSize = "4.6rem";
             document.getElementById("bioSubTitle").style.padding = "0";
             document.getElementById("bioSubTitle").style.marginRight = "0";
             document.getElementById("bioSubTitle").style.textShadow = "8px 2px 3px rgb(52, 97, 193)";
