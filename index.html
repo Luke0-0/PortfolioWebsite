@@ -183,23 +183,8 @@
 
     <!-- More about -->
 
-    <h3 id="moreabout"
-      style=
-      "color: white; 
-      width: 11.5rem;
-      font-size: 45px; 
-      font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-      margin: auto;
-      margin-bottom: 8rem;
-      margin-top: 1rem;
-      align-items: center;
-      justify-content:center;
-      text-align: center;
-      padding: 1.1rem;
-      border-bottom: 12px solid rgb(52, 97, 193);
-      text-shadow: 2px 2px 4px rgb(0, 0, 0);
-      "
-    > About </h3>
+    <h5 id="moreabout", class = "aboutTitle"
+    > About </h5>
 
     <section class="more-about">
 
@@ -211,103 +196,113 @@
             While I like to have fun, I know how to get things done!
           </p>
       </div>
+
       <div class="skill-box">
-        <img 
-          id="img1"
-          class="icon icon-card" 
-          src = "assets/icons/icons8-html.svg"
-          alt=""
-          loading="lazy"
-          style="animation-delay: 1s;"
-         />
+        <div class="icon-card">
+          <img 
+            id="img1"
+            class="icon" 
+            src = "assets/icons/icons8-html.svg"
+            alt=""
+            loading="lazy"
+          />
+          <span class="tooltiptext">HTML</span>
+        </div>
   
-         <img 
+        <div class="icon-card">
+          <img 
             id="img2"
-            class="icon icon-card" 
+            class="icon" 
             src = "assets/icons/icons8-css.svg"
             alt=""
             loading="lazy"
-            style="transform: translateY(-55px); 
-            animation-delay: 0.6s;"
-         />
-
-         <img 
-           id="img3"
-           class="icon icon-card" 
-           src = "assets/icons/icons8-javascript.svg"
-           alt=""
-           loading="lazy"
-           style="animation-delay: 0.4s;"
-         />
-
-         <img 
-          id="img4"
-          class="icon icon-card" 
-          src = "assets/icons/icons8-python.svg"
-          alt=""
-          loading="lazy"
-          style="animation-delay: 0.9s;"
-        />
-
-        <img 
-          id="img5"
-          class="icon icon-card" 
-          src = "assets/icons/icons8-java.svg"
-          alt=""
-          loading="lazy"
-          style="transform: translateY(-55px);
-          animation-delay: 0.8s"
           />
+          <span class="tooltiptext">CSS</span>
+        </div>
 
-        <img 
-          id="img6"
-          class="icon icon-card" 
-          src = "assets/icons/icons8-django.svg"
-          alt=""
-          loading="lazy"
-          style="animation-delay: 0.7s;"
-        />
+        <div class="icon-card">
+          <img 
+            id="img3"
+            class="icon" 
+            src = "assets/icons/icons8-javascript.svg"
+            alt=""
+            loading="lazy"
+          />
+          <span class="tooltiptext">JavaScript</span>
+        </div>
 
-        <img 
-          id="img7"
-          class="icon icon-card" 
-          src = "assets/icons/icons8-mysql.svg"
-          alt=""
-          loading="lazy"
-          style="animation-delay: 0.3s;"
-        />
+        <div class="icon-card">
+         <img 
+            id="img4"
+            class="icon" 
+            src = "assets/icons/icons8-python.svg"
+            alt=""
+            loading="lazy"
+          />
+          <span class="tooltiptext">Python</span>
+        </div>
 
-        <img 
-          id="img8"
-          class="icon icon-card" 
-          src = "assets/icons/icons8-git.svg"
-          alt=""
-          loading="lazy"
-          style="transform: translateY(-55px);
-          animation-delay: 0.5s"
-        />
+        <div class="icon-card">
+          <img 
+            id="img5"
+            class="icon" 
+            src = "assets/icons/icons8-java.svg"
+            alt=""
+            loading="lazy"
+          />
+          <span class="tooltiptext">Java</span>
+        </div>
 
-        <img 
-          id="img9"
-          class="icon icon-card" 
-          src = "assets/icons/icons8-react.svg"
-          alt=""
-          loading="lazy"
-          style="animation-delay: 0.1s;"
-        />
+        <div class="icon-card">
+          <img 
+            id="img6"
+            class="icon" 
+            src = "assets/icons/icons8-django.svg"
+            alt=""
+            loading="lazy"
+          />
+          <span class="tooltiptext">Django</span>
+        </div>
 
-        <p 
-          id="img10"
-          class="icon icon-card"
-          style="color: white;
-          font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-          font-size: 20px;
-          line-height: 20px;
-          padding-top: 1.8rem;
-          transform: translateX(148px) translateY(-55px);
-          animation-delay: 0.2s"
+        <div class="icon-card">
+          <img 
+            id="img7"
+            class="icon" 
+            src = "assets/icons/icons8-mysql.svg"
+            alt=""
+            loading="lazy"
+          />
+          <span class="tooltiptext">MySQL</span>
+        </div>
 
-        > and growing... :)</p>
+        <div class="icon-card">
+          <img 
+            id="img8"
+            class="icon" 
+            src = "assets/icons/icons8-git.svg"
+            alt=""
+            loading="lazy"
+          />
+          <span class="tooltiptext">Git</span>
+        </div>
+
+        <div class="icon-card">
+          <img 
+            id="img9"
+            class="icon" 
+            src = "assets/icons/icons8-react.svg"
+            alt=""
+            loading="lazy"
+          />
+          <span class="tooltiptext">React</span>
+        </div>
+
+        <div class="icon-card">
+          <p 
+            id="img10"
+            class="icon"
+          > and growing... :)</p>
+        </div>
 
       </div>
 
@@ -355,7 +350,7 @@
           <div class="project-container project-card">
             <img
               src="assets/images/website.png"
-              alt="expense-tracker"
+              alt="website"
               loading="lazy"
               class="project-pic"
             />
@@ -365,18 +360,22 @@
             </p>
           </div>
         </a>
-        <div class="project-container project-card">
-          <img
-            src="assets/images/netflixClone.png"
-            alt="netflic-clone"
-            loading="lazy"
-            class="project-pic"
-          />
-          <h3 class="project-title">Netflix Clone</h3>
-          <p class="project-details">
-            I did not actually do this, it is just a placeholder until I actullay make a project
-          </p>
-        </div>
+    
+        <a href="#" target="blank" style="text-decoration: none;">
+          <div class="project-container project-card">
+            <img
+              src="assets/images/yoloPic.png"
+              alt="yolo"
+              loading="lazy"
+              class="project-pic"
+            />
+            <h3 class="project-title">Object Annotator</h3>
+            <p class="project-details">
+              Object video and image annotator program using YOLO object detection
+            </p>
+          </div>
+        </a>
+
         <div class="project-container project-card">
           <img
             src="assets/images/greenyEarth.png"
@@ -386,7 +385,7 @@
           />
           <h3 class="project-title">Greeny Earth</h3>
           <p class="project-details">
-            I did not actually do this, it is just a placeholder until I actullay make a project
+            I did not actually do this, it is just a placeholder until I make a project
           </p>
         </div>
       </div>
