@@ -81,42 +81,47 @@
       <!-- Make heading shrink when user scrolls up -->
       <script>
         window.onscroll = function() {scrollFunction()};
-        var x = window.matchMedia("(max-width: 720px)")
+        var x = window.matchMedia("(max-width: 750px)")
   
         function scrollFunction() {
-          if (x.matches) {
-            if (document.body.scrollTop > 15 || document.documentElement.scrollTop > 15) {
+          if (x.matches) { // Adjustment for smaller screens
+            if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
               document.getElementById("bioTitle").style.fontSize = "1.7rem";
               document.getElementById("bioTitle").style.position = "sticky";
               document.getElementById("bioTitle").style.padding = ".75rem 0rem";
               document.getElementById("bioTitle").style.top = "1rem";
-              document.getElementById("bioTitle").style.marginLeft = "0";
+              document.getElementById("bioTitle").style.marginLeft = "-20rem";
               document.getElementById("bioTitle").style.setProperty("text-shadow", "none", "important");
 
               document.getElementById("bioSubTitle").style.fontSize = "0.6rem";
               document.getElementById("bioSubTitle").style.position = "sticky";
               document.getElementById("bioSubTitle").style.top = "2.6rem";
-              document.getElementById("bioSubTitle").style.marginLeft = "0";
               document.getElementById("bioSubTitle").style.padding = ".75rem 0rem";
+              document.getElementById("bioSubTitle").style.marginLeft = "-20rem";
               document.getElementById("bioSubTitle").style.setProperty("text-shadow", "none", "important");
 
               document.getElementById("about").style.position = "sticky";
-              document.getElementById("about").style.top = "-5rem";
-              document.getElementById("about").style.height = "5%";
+              document.getElementById("about").style.top = "-4.5rem";
+              document.getElementById("about").style.height = "1%";
               document.getElementById("about").style.width = "20%";
+              document.getElementById("about").style.padding = "0";
+
 
               document.getElementById("nav").style.boxShadow = "0px 2.5px 5px black";
               document.getElementById("nav").style.opacity = "100%";
-        
+              document.getElementById("nav").style.height = "10%";
+
             } 
             
             else {
               document.getElementById("bioTitle").style.fontSize = "5rem";
               document.getElementById("bioTitle").style.padding = "0";
+              document.getElementById("bioTitle").style.marginLeft = "0";
               document.getElementById("bioTitle").style.textShadow = "8px 2px 3px rgb(52, 97, 193)";
 
               document.getElementById("bioSubTitle").style.fontSize = "1.75rem";
               document.getElementById("bioSubTitle").style.padding = "0";
+              document.getElementById("bioSubTitle").style.marginLeft = "0";
              
               document.getElementById("bioSubTitle").style.textShadow = "8px 2px 3px rgb(52, 97, 193)";
 
@@ -125,9 +130,10 @@
 
               document.getElementById("nav").style.boxShadow = "0px 0px 0px black";
               document.getElementById("nav").style.opacity = "0%";
+
             }
           }
-          else {
+          else { // This makes the "Luke Reinbach" heading shrink and move into the nav bar
             if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
               document.getElementById("bioTitle").style.fontSize = "1.7rem";
               document.getElementById("bioTitle").style.position = "sticky";
@@ -174,11 +180,14 @@
       </script>
     </section>
 
-    <section class = "miniBio">
-      <p>
-        Junior software developer, intrepid learner, generally cool dude.
-      </p>
+    <section class = "miniBio" id="mini">
+      <div>
+        <p>
+          Junior software developer, intrepid learner, generally cool dude.
+        </p>
+      </div>
     </section>
+      
 
 
     <!-- More about -->
@@ -361,7 +370,7 @@
           </div>
         </a>
     
-        <a href="#" target="blank" style="text-decoration: none;">
+        <a href="https://github.com/Luke0-0/YOLO-Program" target="blank" style="text-decoration: none;">
           <div class="project-container project-card">
             <img
               src="assets/images/yoloPic.png"

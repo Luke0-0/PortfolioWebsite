@@ -49,6 +49,7 @@ a:hover {
 body {
   font-family: var(--font-family);
   background-color: var(--bg-color);
+
 }
 
 /* Naviagation bar format */
@@ -228,6 +229,7 @@ nav ul li {
   text-align: center;
   max-width: 50rem;
   margin: auto;
+  width: fit-content;
 }
 
 /* bit of text below "Luke Reinbach" heading */
@@ -700,7 +702,9 @@ footer {
 
   .bio {
     margin: auto;
-    margin-top: 4rem
+    margin-top: 4rem;
+    margin-left: 14rem;
+    width: fit-content;
   }
 
   .bio h1 {
@@ -773,6 +777,7 @@ footer {
     width: 5rem;
     height: 5rem;
     padding: 1rem;
+    line-height: 1.1rem !important;
   }
 
   .icon-card {
@@ -839,6 +844,13 @@ footer {
 @media screen and (max-width: 440px) {
   .submit-btn {
     margin-left: 16.875rem;
+    font-size: 13px;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .submit-btn {
+    margin-left: 15.15rem;
     font-size: 13px;
   }
 }
