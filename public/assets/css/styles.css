@@ -698,13 +698,15 @@ footer {
     margin-top: -4rem;
     flex-direction: column;
     gap: 0;
+    width: fit-content;
   }
 
   .bio {
-    margin: auto;
     margin-top: 4rem;
-    margin-left: 14rem;
+   
     width: fit-content;
+   
+
   }
 
   .bio h1 {
